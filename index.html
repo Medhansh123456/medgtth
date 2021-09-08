@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="sketch.js"></script>
+  <title>Document</title>
+</head>
+<body>
+
+   <form class="box" autocomplete="off">
+     <h1 style="color: whitesmoke;">login</h1>
+     <input type="text" placeholder="Enter username" id="username">
+     <input type="password" placeholder="Enter password" id="password">
+     <input style="color: rgba(255, 255, 255, 0.603);" class="btn" type="submit" name="" value="Login" onclick="validate()">
+  
+   </form autocomplete="off">
+
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  body{
+    background-color: rgb(49, 49, 49);
+  }
+  
+  input{
+    border:thick 2px;
+    border-color:#fc7608;
+    padding: 7px;
+    background-color: transparent;
+    color: #fc7608;
+  }
+  
+  ::placeholder{
+    color: rgba(255, 255, 255, 0.603);
+  }
+  
+  .box{
+  position: relative;
+  margin-top:200px;
+  margin-left: 35%;
+  
+  }
+  
+  .box h1{
+   position: relative;
+  margin-left:130px;
+  top:-10px;
+  }
+  
+  .btn{
+  position: relative;
+  top: 45px;
+  left: -200px;
+  }
+  
+    </style>
+
+<SCRIPT language=JavaScript>
+
+    ///disable right click////////////////////////////////////////////////////////////////////  
+    var message="Function is disabled";
+    function rtclickcheck(keyp){
+      if (navigator.appName == "Netscape" && keyp.which == 3){
+       alert(message); return false; }
+    
+    if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) {
+     alert(message); return false; } }
+    
+    document.onmousedown = rtclickcheck;
+
+    ////////////////////////////////////////////////////////////////////////////////////////
+
+  function validate(){
+  var username=document.getElementById('username').value;
+  var password=document.getElementById('password').value;
+  if(username=="medhansh"&&password=="medhansh@2008"){
+  alert("login succesfull");
+  window.open("home.html");
+  }
+  else{
+    alert("login failed");
+    
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+    </SCRIPT>
+</body>
+</html>
